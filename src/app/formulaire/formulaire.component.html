@@ -1,0 +1,37 @@
+<div class="form-group">
+    <label for="power">GESTION STOCK</label>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+
+
+<form #monForm=ngForm (ngSubmit)=ajouterProduit()>
+    <div>
+    Nom : <input type=text name=nom [(ngModel)]=produit.nom required #nom="ngModel">
+    </div>
+    
+    <div>
+    Libelle : <input type=text name=libelle [(ngModel)]=produit.libelle required #libelle="ngModel">
+    </div>
+   
+    <div>
+     Quantite : <input type=number name=quantite [(ngModel)]=produit.quantite required #quantite="ngModel">
+        </div>
+        
+        <div>
+            Dateprod : <input type=Date name=dateprod [(ngModel)]=produit.dateprod required #dateprod="ngModel">
+            </div>
+            
+            <div>
+                Dateperem : <input type=Date name=dateperem [(ngModel)]=produit.dateperem required #dateperem="ngModel">
+            
+                </div>
+                
+    <div>
+    <button [disabled]=!monForm.valid> Ajouter</button>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>

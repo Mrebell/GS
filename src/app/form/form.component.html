@@ -1,0 +1,35 @@
+<div class="form-group">
+    <label for="power">GESTION STOCK</label>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+
+<form [formGroup]="produitForm" (ngSubmit)='afficherTout()'>
+    <div>
+    Nom :
+    <input type="text" formControlName="nom">
+    </div>
+    <div>
+    Libelle :
+    <input type="text" formControlName="Libelle">
+    </div>
+    <div>
+    Quantite :
+    <input type="number" formControlName="Quantite">
+    </div>
+
+    <div>
+        Dateprod :
+        <input type="date" formControlName="Dateprod">
+        </div>
+        <div>
+        Dateperem :
+            <input type="date" formControlName="Dateperem">
+            </div>
+            <button type='submit' [disabled]='!produitForm.valid'>Ajouter</button>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
